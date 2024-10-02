@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-639.561,0)">
+        <g id="Artboard1" transform="matrix(1,0,0,1,639.561,0)">
+            <rect x="0" y="0" width="512" height="512" style="fill:none;"/>
+            <g transform="matrix(1.10984,0,0,1.10984,-37.1588,-28.1201)">
+                <circle cx="264.144" cy="256" r="139.89" style="fill:rgb(0,2,28);"/>
+            </g>
+            <g transform="matrix(0.774026,0,0,0.774026,102.296,125.036)">
+                <g transform="matrix(1,0,0,1.1,0,-26.1224)">
+                    <g transform="matrix(387.584,0,0,387.584,414.349,261.224)">
+                    </g>
+                    <text x="23.664px" y="261.224px" style="font-family:'Pancakes-Regular', 'Pancakes';font-size:387.584px;fill:url(#_Linear1);stroke:white;stroke-width:5.12px;">m<tspan x="253.501px " y="261.224px ">b</tspan></text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(359.764,0,0,255.66,16.8509,146.642)"><stop offset="0" style="stop-color:rgb(218,124,255);stop-opacity:1"/><stop offset="0.45" style="stop-color:rgb(169,138,255);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(48,174,255);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>
