@@ -28,6 +28,19 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
+    title: 'portfolio (old)',
+    description: {
+      short: 'My old portfolio',
+      long: [
+        "I built this portfolio in 2020, but I've since moved to this new design.",
+        'When I built this out, I really liked ChakraUI and was learning a lot about framer-motion and other browser animations.',
+        "I know that it's still fully functional, so feel free to clone and run it :)",
+      ].join(' '),
+    },
+    github: 'https://github.com/MylesWritesCode/portfolio',
+    imgs: ['/assets/projects/portfolio-old/main.png', '/assets/projects/portfolio-old/achievements.png'],
+  },
+  {
     title: 'TODO',
     description: {
       short:

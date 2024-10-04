@@ -76,7 +76,7 @@ export function Projects() {
     <Section id='projects' title='PROJECTS.'>
       <div className='flex w-full flex-col gap-4'>
         <span className='italic'>🚀 some side projects, to satisfy my curiosity</span>
-        <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
+        <div className='grid grid-cols-1 grid-rows-2 gap-4 md:grid-cols-2'>
           {PROJECTS.map((project) => (
             <ProjectItem key={project.title} project={project} onWindowClick={handleOnWindowClick} />
           ))}
@@ -97,11 +97,6 @@ interface ProjectProps {
 }
 
 const ProjectItem = ({ project, onWindowClick = () => null }: ProjectProps) => {
-  // className={classNames(
-  //   'flex select-none items-center justify-between gap-2',
-  //   'border bg-base-200 p-4 hover:border-primary hover:text-primary',
-  //   'dark:hover:border-accent dark:hover:text-accent',
-  // )}>
   return (
     <div
       className={classNames(
@@ -115,7 +110,7 @@ const ProjectItem = ({ project, onWindowClick = () => null }: ProjectProps) => {
         </h2>
         <p className='line-clamp-3'>{project.description.short}</p>
       </div>
-      <div className='flex items-center gap-1'>
+      <div className='flex items-start gap-1'>
         {project.github && (
           <NextLink href={project.github} target='_blank'>
             <button type='button' className='p-1 hover:text-primary dark:hover:text-secondary'>
