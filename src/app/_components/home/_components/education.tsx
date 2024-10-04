@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import type { Education } from '@/interfaces/education';
 
@@ -13,7 +13,7 @@ export const ResumeEducation = ({ education }: ResumeEducationProps) => {
     <div className='group flex flex-col gap-2 border border-base-300 bg-base-200 p-4 hover:border-secondary'>
       <div id='resume__work-experience_header' className='flex w-full items-center'>
         <div
-          className={classNames(
+          className={cn(
             'flex w-full flex-col justify-between gap-2 font-bold tracking-widest',
             'group-hover:text-secondary',
             'md:flex-row md:items-center',

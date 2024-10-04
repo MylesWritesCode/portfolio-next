@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import type { Skill } from '@/interfaces/skill';
 
@@ -9,7 +9,7 @@ interface ResumeSkillProps {
 export const ResumeSkill = ({ skill }: ResumeSkillProps) => {
   return (
     <div
-      className={classNames(
+      className={cn(
         'flex select-none items-center justify-between gap-2',
         'border bg-base-200 p-4 hover:border-primary hover:text-primary',
         'dark:hover:border-accent dark:hover:text-accent',
