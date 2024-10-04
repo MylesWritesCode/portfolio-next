@@ -1,6 +1,6 @@
 'use client';
 
-import classNames from 'classnames';
+import cn from 'classnames';
 import NextLink from 'next/link';
 import React, { useCallback, useEffect, useState } from 'react';
 import { IoLogoGithub } from 'react-icons/io';
@@ -99,7 +99,7 @@ interface ProjectProps {
 const ProjectItem = ({ project, onWindowClick = () => null }: ProjectProps) => {
   return (
     <div
-      className={classNames(
+      className={cn(
         'group flex flex-row justify-between p-4 align-center md:odd:last:col-span-2',
         'border bg-base-200 p-4 hover:border-primary',
         'dark:hover:border-secondary',

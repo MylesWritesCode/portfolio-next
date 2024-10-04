@@ -32,6 +32,7 @@ export default function RootLayout({
         <meta name='msapplication-config' content='/favicon/browserconfig.xml' />
         <meta name='theme-color' content='#000' />
         <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
+        <link rel='me' href='https://mstdn.social/@mylesberueda' />
       </head>
       <body className={cn(inter.className)}>
         <div className='min-h-screen'>

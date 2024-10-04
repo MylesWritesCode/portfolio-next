@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import classNames from 'classnames';
+import cn from 'classnames';
 
 import type { WorkExperience } from '@/interfaces/work-experience';
 
@@ -22,7 +22,7 @@ export const ResumeWorkExperience = ({ experience }: ResumeWorkExperienceProps) 
     <div className='group flex select-none flex-col gap-2 border border-base-300 bg-base-200 p-4 hover:border-primary'>
       <div id='resume__work-experience_header' className='flex w-full items-center gap-2'>
         <div
-          className={classNames(
+          className={cn(
             'flex w-full flex-col items-start justify-between gap-2 font-bold tracking-widest',
             'group-hover:text-primary',
             'md:flex-row',
