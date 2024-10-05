@@ -19,7 +19,7 @@ export const ResumeWorkExperience = ({ experience }: ResumeWorkExperienceProps) 
   }, [experience.dates]);
 
   return (
-    <div className='group flex select-none flex-col gap-2 border border-base-300 bg-base-200 p-4 hover:border-primary'>
+    <div className='group flex flex-col gap-2 border border-base-300 bg-base-200 p-4 hover:border-primary'>
       <div id='resume__work-experience_header' className='flex w-full items-center gap-2'>
         <div
           className={cn(
