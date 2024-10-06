@@ -1,4 +1,8 @@
+'use client';
+
+import { useCallback } from 'react';
 import NextLink from 'next/link';
+import cn from 'classnames';
 
 import { ThemeSwitcher } from '@/components/layout';
 
@@ -15,7 +19,10 @@ const Header = () => {
           <HeaderLink href='/#about-me'>about me</HeaderLink>
           <HeaderLink href='/#resume'>resume</HeaderLink>
           <HeaderLink href='/#projects'>projects</HeaderLink>
-          <HeaderLink href='/posts'>blog</HeaderLink>
+          {/* TODO(_): remove disabled, hidden when i actually add blog posts lmao */}
+          <HeaderLink href='/posts' disabled hidden>
+            blog
+          </HeaderLink>
           <HeaderLink href='/#links'>links</HeaderLink>
           <ThemeSwitcher />
         </div>
@@ -29,11 +36,25 @@ export default Header;
 interface HeaderLinkProps {
   href: string;
   children: React.ReactNode;
+  disabled?: boolean;
+  hidden?: boolean;
 }
 
-const HeaderLink = ({ href, children }: HeaderLinkProps) => {
+const HeaderLink = ({ href, disabled, hidden, children }: HeaderLinkProps) => {
+  const handleOnClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (disabled) e.preventDefault();
+    },
+    [disabled],
+  );
+
+  if (hidden) return null;
+
   return (
-    <NextLink className='hover:text-primary' href={href}>
+    <NextLink
+      className={cn('text-base-content', disabled ? '!text-opacity-40 cursor-not-allowed' : 'hover:text-primary')}
+      href={href}
+      onClick={handleOnClick}>
       {children}
     </NextLink>
   );
