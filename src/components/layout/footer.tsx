@@ -36,8 +36,8 @@ const Footer = () => {
                 Github
               </NextLink>
               &nbsp;and hosted on&nbsp;
-              <NextLink href='https://pages.github.com' target='_blank'>
-                Github Pages
+              <NextLink href='https://pages.cloudflare.com/' target='_blank'>
+                Cloudflare Pages
               </NextLink>
               . The purpose of the portfolio is to showcase my work. It is meant to serve as an assessment tool for
               potential employers, and for my own personal self-reflection. I'm always looking for ways to improve, so

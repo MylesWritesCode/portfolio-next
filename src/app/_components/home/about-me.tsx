@@ -6,10 +6,18 @@ export function AboutMe() {
       <div className='flex w-full flex-col gap-4'>
         <span className='italic'>🏄 a little bit about who i am</span>
         <div className='flex gap-4'>
-          <span>
+          <p>
             I'm still working on this portfolio (Oct. 2024), I'll figure out a way to brag about myself here soon :).
-            Everything else should be good to go though.
-          </span>
+            Everything else should be good to go though. I'm still working on this portfolio (Oct. 2024), I'll figure
+            out a way to brag about myself here soon :). Everything else should be good to go though. I'm still working
+            on this portfolio (Oct. 2024), I'll figure out a way to brag about myself here soon :). Everything else
+            should be good to go though. I'm still working on this portfolio (Oct. 2024), I'll figure out a way to brag
+            about myself here soon :). Everything else should be good to go though. I'm still working on this portfolio
+            (Oct. 2024), I'll figure out a way to brag about myself here soon :). Everything else should be good to go
+            though. I'm still working on this portfolio (Oct. 2024), I'll figure out a way to brag about myself here
+            soon :). Everything else should be good to go though. I'm still working on this portfolio (Oct. 2024), I'll
+            figure out a way to brag about myself here soon :). Everything else should be good to go though.
+          </p>
         </div>
       </div>
     </Section>
