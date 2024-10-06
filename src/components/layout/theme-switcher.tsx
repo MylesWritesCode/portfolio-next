@@ -1,10 +1,15 @@
 'use client';
 
+import cn from 'classnames';
 import { useCallback } from 'react';
 
-const ThemeSwitcher = () => {
+interface ThemeSwitcherProps {
+  className?: string;
+}
+
+const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
   return (
-    <div className='dropdown dropdown-end'>
+    <div className={cn('dropdown dropdown-end', className)}>
       <button tabIndex={0} type='button' className='btn'>
         THEME
       </button>

@@ -8,15 +8,31 @@ import { ThemeSwitcher } from '@/components/layout';
 
 const Header = () => {
   return (
-    <div className='flex flex-col px-4 sticky top-0 left-0 right-0 border-base-content bg-base-100 border-b justify-center w-full items-center'>
-      <div className='flex w-full max-w-7xl flex-col items-center justify-between px-12 py-2 md:flex-row'>
-        <h2 className='flex items-center font-bold text-2xl tracking-tight md:text-4xl md:tracking-tighter'>
-          <NextLink href='/' className='hover:underline'>
-            myles BERUEDA
-          </NextLink>
-        </h2>
-        <div className='flex items-center gap-4'>
-          <HeaderLink href='/#about-me'>about me</HeaderLink>
+    <div
+      className={cn(
+        'sticky top-0 right-0 left-0 z-50',
+        'border-base-content border-b',
+        'flex w-full flex-col items-center justify-center bg-base-100 px-4',
+      )}>
+      <div
+        className={cn(
+          'flex w-full flex-col items-center justify-between',
+          'max-w-7xl px-4 py-2',
+          'md:flex-row md:px-12',
+        )}>
+        <div className='flex w-full justify-between md:w-auto'>
+          <h2 className={cn('flex items-center font-bold text-2xl tracking-tight', 'md:text-4xl md:tracking-tighter')}>
+            <NextLink href='/' className='hover:underline'>
+              myles BERUEDA
+            </NextLink>
+          </h2>
+          {/* Switcher for small screens */}
+          <ThemeSwitcher className='block md:hidden' />
+        </div>
+        <div className='flex w-full justify-start gap-4 md:w-auto md:items-center'>
+          <HeaderLink href='/#about-me'>
+            about<span className='hidden md:inline-block'>&nbsp;me</span>
+          </HeaderLink>
           <HeaderLink href='/#resume'>resume</HeaderLink>
           <HeaderLink href='/#projects'>projects</HeaderLink>
           {/* TODO(_): remove disabled, hidden when i actually add blog posts lmao */}
@@ -24,7 +40,8 @@ const Header = () => {
             blog
           </HeaderLink>
           <HeaderLink href='/#links'>links</HeaderLink>
-          <ThemeSwitcher />
+          {/* Switcher for full-sized screens */}
+          <ThemeSwitcher className='hidden md:block' />
         </div>
       </div>
     </div>
