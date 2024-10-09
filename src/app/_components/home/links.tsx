@@ -11,7 +11,7 @@ export function Links() {
         <span className='italic'>🌐 other places you can find me on the internet</span>
         <div className='flex flex-col gap-2 md:flex-row md:gap-4'>
           <Link href={LINKS.github} title='github' />
-          <Link href={LINKS.mastodon} title='mastodon' />
+          <Link rel='me' href={LINKS.mastodon} title='mastodon' />
           <Link href={LINKS.linkedin} title='linkedin' />
         </div>
       </div>
@@ -24,11 +24,12 @@ export default Links;
 interface LinkProps {
   href: string;
   title: string;
+  rel?: string;
 }
 
-const Link = ({ href, title }: LinkProps) => {
+const Link = ({ href, title, rel }: LinkProps) => {
   return (
-    <NextLink href={href} className='hover:text-primary' target='_blank'>
+    <NextLink rel={rel} href={href} className='hover:text-primary' target='_blank'>
       <h2 className='text-2xl'>{title}</h2>
     </NextLink>
   );
