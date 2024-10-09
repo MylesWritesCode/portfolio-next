@@ -30,7 +30,7 @@ export function Projects() {
     const url = p.title.toLowerCase().replace(/\s/g, '-');
 
     const C = () => (
-      <div className='flex flex-col gap-4'>
+      <div className='flex max-h-[80%] flex-col gap-4'>
         <h3 className='font-medium text-xl'>{p.title}</h3>
         {p.description.long && <p>{p.description.long}</p>}
         <div className='carousel w-full border'>
