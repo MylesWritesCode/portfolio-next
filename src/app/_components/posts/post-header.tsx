@@ -27,7 +27,7 @@ export function PostHeader({ title, coverImage, date, author, readingTime }: Pro
         <div className='mb-6 block md:hidden'>
           <Avatar name={author.name} picture={author.picture} />
         </div>
-        <div className='mb-6 text-lg'>
+        <div className='mb-6 block text-lg'>
           <DateFormatter dateString={date} />
           <span className='ml-4'>|</span>
           <span className='ml-4'>{readingTime.toFixed(0)} min read</span>

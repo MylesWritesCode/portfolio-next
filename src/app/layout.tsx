@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import { Footer, Header } from '@/components/layout';
 
 import './globals.css';
+import { getAllPosts } from '@/lib/api';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,6 +20,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [post] = getAllPosts();
+
   return (
     <html lang='en' data-theme='dracula'>
       <head>
@@ -39,7 +42,7 @@ export default function RootLayout({
           <Header />
           {children}
         </div>
-        <Footer />
+        <Footer post={post} />
       </body>
     </html>
   );
