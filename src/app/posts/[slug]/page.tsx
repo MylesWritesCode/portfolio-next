@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import Alert from '@/app/_components/alert';
-import Container from '@/app/_components/container';
-import { PostBody } from '@/app/_components/post-body';
-import { PostHeader } from '@/app/_components/post-header';
+import { PostBody } from '@/app/_components/posts/post-body';
+import { PostHeader } from '@/app/_components/posts/post-header';
+import Alert from '@/components/alert';
+import Container from '@/components/container';
 import { getAllPosts, getPostBySlug } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
 
@@ -15,15 +15,21 @@ export default async function Post({ params }: Params) {
     return notFound();
   }
 
-  const content = await markdownToHtml(post.content || '');
+  const file = await markdownToHtml(post.content || '');
 
   return (
     <main>
       <Alert preview={post.preview} />
       <Container>
-        <article className='mb-32'>
-          <PostHeader title={post.title} coverImage={post.coverImage} date={post.date} author={post.author} />
-          <PostBody content={content} />
+        <article className='mt-16 mb-32'>
+          <PostHeader
+            title={post.title}
+            coverImage={post.coverImage}
+            date={post.date}
+            author={post.author}
+            readingTime={file.time}
+          />
+          <PostBody content={file.contents} />
         </article>
       </Container>
     </main>

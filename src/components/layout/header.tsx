@@ -35,10 +35,7 @@ const Header = () => {
           </HeaderLink>
           <HeaderLink href='/#resume'>resume</HeaderLink>
           <HeaderLink href='/#projects'>projects</HeaderLink>
-          {/* TODO(_): remove disabled, hidden when i actually add blog posts lmao */}
-          <HeaderLink href='/posts' disabled hidden>
-            blog
-          </HeaderLink>
+          <HeaderLink href='/posts'>blog</HeaderLink>
           <HeaderLink href='/#links'>links</HeaderLink>
           {/* Switcher for full-sized screens */}
           <ThemeSwitcher className='hidden md:block' />
