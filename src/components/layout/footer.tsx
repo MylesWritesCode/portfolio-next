@@ -2,9 +2,15 @@ import NextLink from 'next/link';
 import { IoLogoGithub, IoLogoLinkedin, IoMailOutline } from 'react-icons/io5';
 import { SiMastodon } from 'react-icons/si';
 
+import type { Post } from '@/interfaces/post';
 import { LINKS } from '@/lib/links';
+import { PostPreview } from '@/app/_components/posts/post-preview';
 
-const Footer = () => {
+interface FooterProps {
+  post: Post;
+}
+
+const Footer = ({ post: _ }: FooterProps) => {
   return (
     <>
       <footer className='mt-24 flex justify-center bg-base-200 p-10 text-base-content'>

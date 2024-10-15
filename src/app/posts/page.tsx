@@ -1,20 +1,19 @@
-import Container from '@/app/_components/container';
-import { HeroPost } from '@/app/_components/hero-post';
-import { Intro } from '@/app/_components/intro';
-import { MoreStories } from '@/app/_components/more-stories';
+import { HeroPost } from '@/app/_components/posts/hero-post';
+import { MoreStories } from '@/app/_components/posts/more-stories';
+import Container from '@/components/container';
 import { getAllPosts } from '@/lib/api';
 
 export default function Index() {
   const allPosts = getAllPosts();
-
   const heroPost = allPosts[0];
-
   const morePosts = allPosts.slice(1);
 
   return (
     <main>
       <Container>
-        <Intro />
+        <h1 className='my-16 w-full text-left font-bold text-5xl uppercase leading-none tracking-tighter md:text-8xl'>
+          Articles.
+        </h1>
         <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}
