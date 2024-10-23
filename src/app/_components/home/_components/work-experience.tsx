@@ -66,6 +66,7 @@ export const ResumeWorkExperience = ({ experience }: ResumeWorkExperienceProps) 
               <div key={link.title} className='flex [&:last-child>.comma]:hidden'>
                 <NextLink
                   href={link.uri}
+                  target='_blank'
                   className='flex items-center justify-center hover:text-primary hover:underline'>
                   {LinkTypeIcon[link.type]}
                   <span className='ml-1'>{link.title}</span>
