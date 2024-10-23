@@ -1,6 +1,12 @@
+interface Link {
+  type: 'website' | 'github' | 'linkedin';
+  title: string;
+  uri: string;
+}
+
 export interface WorkExperience {
   company: string;
-  position: string;
+  position?: string;
   location?: string;
   dates: {
     start: Date;
@@ -8,4 +14,5 @@ export interface WorkExperience {
   };
   description?: string;
   entries?: string[];
+  links?: Link[];
 }
