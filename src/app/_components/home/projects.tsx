@@ -3,7 +3,7 @@
 import cn from 'classnames';
 import NextLink from 'next/link';
 import React, { useCallback, useEffect, useState } from 'react';
-import { IoLogoGithub } from 'react-icons/io';
+import { IoLogoGithub } from 'react-icons/io5';
 import { TfiWindow } from 'react-icons/tfi';
 
 import { Modal, type ModalRef } from '@/components';
